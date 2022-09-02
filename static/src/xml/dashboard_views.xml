@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="crmdashboard">
+        <div class="oh_dashboards">
+        <div class="container-fluid my-5 o_pj_dashboard"/>
+        </div>
+    </t>
+    <t t-name="UserDashboard">
+        <section class="dashboard_main_section" id="main_section_login">
+            <div class="row">
+                <div class="col-sm-12 mb-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-8">
+                            <h1 class="section-header">CRM Dashboard</h1>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <form class="form-group">
+                                <select id="this_values" class="form-control">
+                                    <option id="this_year" value="this_year">This Year</option>
+                                    <option id="this_quarter" value="this_quarter">This Quarter</option>
+                                    <option id="this_month" value="this_month" selected="">This Month</option>
+                                    <option id="this_week" value="this_week">This Week</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        </section>
+    </t>
+    <t t-name="DashboardProject">
+       <div class="row main-section" style="margin-left: 170px;">
+           <div class="col-md-4 col-sm-6 oh-payslip" id="total_leads">
+               <div class="oh-card" style="width: 410px;">
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon" style="background:#e08048;"><i class="fa fa-puzzle-piece"/></div>
+                           <div class="stat-content">
+                               <div class="stat-head">My Leads</div>
+                               <div class="stat_count"><t t-esc="widget.total_leads"/></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+<!--           <div class="o_aggregate_col o_group_col_2">-->
+<!--               <div name="leads" class="o_aggregate o_clickable">-->
+<!--                   <div class="stat-widget-one">-->
+<!--                       <label>Leads</label>-->
+<!--                   <div class="o_value">-->
+<!--                       <t t-esc="widget.total_leads"/>-->
+<!--                   </div>-->
+<!--                   </div>-->
+<!--               </div>-->
+<!--           </div>-->
+           <div class="col-md-4 col-sm-6 tot_emp oh-payslip">
+               <div class="oh-card" style="width: 410px;">
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon" style="background:#645bd0"><i class="fa fa-user"/></div>
+                           <div class="stat-content">
+                               <div class="stat-head">My Opportunities</div>
+                               <div class="stat_count"><t t-esc="widget.total_projects"/></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-4 col-sm-6 tot_tasks oh-payslip">
+               <div class="oh-card" style="width: 410px;">
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon" style="background:#85d05b"><i class="fa fa-tasks"/></div>
+                           <div class="stat-content">
+                                   <div class="stat-head">Total tasks</div>
+                               <div class="stat_count"><t t-esc="widget.total_tasks"/></div>
+                               </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </t>
+</templates>
